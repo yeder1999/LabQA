@@ -1,0 +1,12 @@
+[INFO]    Initialized logging in .\pabot_results
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 started.
+[DEBUG]   Storing .pabotsuitenames file
+[DEBUG]   2026-09-25 13:40:23.941056 [PID:14660] [1] [ID:2] EXECUTING Parcours {./edge.txt}
+[DEBUG]   2026-09-25 13:40:23.942040 [PID:11800] [2] [ID:1] EXECUTING Parcours {./firefox.txt}
+[DEBUG]   2026-09-25 13:40:23.942699 [PID:21832] [0] [ID:0] EXECUTING Parcours {./chrome.txt}
+[DEBUG]   2026-09-25 13:40:29.037160 [PID:21832] [0] [ID:0] still running Parcours {./chrome.txt} after 5.0s
+[DEBUG]   2026-09-25 13:40:29.092362 [PID:14660] [1] [ID:2] still running Parcours {./edge.txt} after 5.0s
+[DEBUG]   2026-09-25 13:40:29.093238 [PID:11800] [2] [ID:1] still running Parcours {./firefox.txt} after 5.0s
+[INFO]    2026-09-25 13:40:36.146833 [PID:21832] [0] [ID:0] PASSED Parcours {./chrome.txt} in 12.2 seconds
+[INFO]    2026-09-25 13:40:37.976659 [PID:14660] [1] [ID:2] PASSED Parcours {./edge.txt} in 14.0 seconds
+[DEBUG]   2026-09-25 13:40:39.480252 [PID:11800] [2] [ID:1] still running Parcours {./firefox.txt} after 15.0s

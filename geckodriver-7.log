@@ -1,0 +1,21 @@
+1790331433912	geckodriver	INFO	Listening on 127.0.0.1:61112
+1790331437014	mozrunner::runner	INFO	Running command: "C:\\Users\\dell\\.cache\\selenium\\firefox\\win64\\156.0.1\\firefox.exe" "--marionette" "--remote-debugging ... 13" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\dell\\AppData\\Local\\Temp\\rust_mozprofileBbFZ2O"
+Dynamically enable window occlusion 0
+1790331437606	Marionette	INFO	Marionette enabled
+1790331437957	Marionette	INFO	Listening on port 61142
+WebDriver BiDi listening on ws://127.0.0.1:61113
+Read port: 61142
+1790331438230	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Erreur non spécifiée" }
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Erreur non spécifiée" }
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Erreur non spécifiée" }
+console.error: "Experiment desktop-release-rollout-show-relay-to-all-browsers-next-sign-up-modal-cta has unknown featureId: email-autocomplete-relay"
+console.error: "Experiment visual-card-updates has unknown featureId: newtabRefinedCardsLayout"
+console.error: "Experiment enable-nimbus-unenrollment-synchronization has unknown featureId: nimbusStore"
+console.error: "Experiment private-window-visual-refresh-design-change-only has unknown featureId: feltPrivacy"
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ssid-testing-agency.github.io."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://ssid-testing-agency.github.io."
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Erreur non spécifiée" }
+1790331456418	Marionette	INFO	Stopped listening on port 61142
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.sys.mjs, line 50: TypeError: can't access property "QueryInterface", aWindow.docShell is null
+Dynamically enable window occlusion 1

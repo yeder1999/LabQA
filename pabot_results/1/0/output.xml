@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.14.7 on win32)" generated="2026-09-25T13:40:24.370553" rpa="false" schemaversion="5">
+<suite id="s1" name="Parcours" source="C:\Users\dell\Desktop\LabQA\Tests\parcours.robot">
+<test id="s1-t1" name="e2e" line="14">
+<kw name="init" owner="keyword" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:24.996899" level="INFO">Opening browser 'chrome' to base url 'https://ssid-testing-agency.github.io/Lab.qa/#/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-09-25T13:40:24.996335" elapsed="1.427350"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-09-25T13:40:26.424272" elapsed="0.012799"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:24.994421" elapsed="1.443000"/>
+</kw>
+<kw name="connexion" owner="login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:26.440255" level="INFO">Typing text 'jean_dupont' into text field 'id:username'.</msg>
+<arg>${user}</arg>
+<arg>jean_dupont</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:26.439227" elapsed="0.349218"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:26.789668" level="INFO">Typing text 'Baguette42!' into text field 'id:password'.</msg>
+<arg>${pwd}</arg>
+<arg>Baguette42!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:26.788955" elapsed="0.280162"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:27.070158" level="INFO">Clicking button 'css:[data-testid="login-submit"]'.</msg>
+<arg>${btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:27.069561" elapsed="0.267493"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:26.437971" elapsed="0.899537"/>
+</kw>
+<kw name="getTextHeader" owner="catalog">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:27.573492" level="INFO">${text} = Tous les produits (18 produits — page 1/3)</msg>
+<var>${text}</var>
+<arg>${header}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:27.339653" elapsed="0.233994"/>
+</kw>
+<return>
+<value>${text}</value>
+<status status="PASS" start="2026-09-25T13:40:27.573898" elapsed="0.000172"/>
+</return>
+<msg time="2026-09-25T13:40:27.574465" level="INFO">${textHEader} = Tous les produits (18 produits — page 1/3)</msg>
+<var>${textHEader}</var>
+<status status="PASS" start="2026-09-25T13:40:27.338760" elapsed="0.235935"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${textHEader}</arg>
+<arg>Tous les produit</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-09-25T13:40:27.575190" elapsed="0.001358"/>
+</kw>
+<kw name="clickSurVetement" owner="catalog">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:27.578491" level="INFO">Clicking element 'css:[data-testid="sidebar-category-clothing"]'.</msg>
+<arg>${vetementBTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:27.577915" elapsed="0.378711"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:27.577103" elapsed="0.379833"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:27.987621" level="INFO">Current location contains 'category=clothing'.</msg>
+<arg>category=clothing</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-09-25T13:40:27.957291" elapsed="0.030587"/>
+</kw>
+<kw name="clickSurAddFavory" owner="catalog">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:27.989913" level="INFO">Clicking element 'css:[data-testid="wishlist-btn-sauce-bolt-shirt"]'.</msg>
+<arg>${addFavory}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:27.989176" elapsed="0.125067"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:27.988382" elapsed="0.126175"/>
+</kw>
+<kw name="getTxtCartCount" owner="catalog">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:28.165031" level="INFO">${msg} = 1</msg>
+<var>${msg}</var>
+<arg>${wishlistcount}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:28.115912" elapsed="0.049241"/>
+</kw>
+<return>
+<value>${msg}</value>
+<status status="PASS" start="2026-09-25T13:40:28.165395" elapsed="0.000147"/>
+</return>
+<msg time="2026-09-25T13:40:28.166005" level="INFO">${msgCount} = 1</msg>
+<var>${msgCount}</var>
+<status status="PASS" start="2026-09-25T13:40:28.115134" elapsed="0.050966"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${msgCount}</arg>
+<arg>1</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-09-25T13:40:28.166650" elapsed="0.001144"/>
+</kw>
+<kw name="clickWitchListCount" owner="catalog">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:28.169436" level="INFO">Clicking element 'css:[data-testid="wishlist-count"]'.</msg>
+<arg>${wishlistcount}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:28.168914" elapsed="0.122716"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:28.168218" elapsed="0.123904"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:28.310237" level="INFO">Current location contains 'wishlist'.</msg>
+<arg>wishlist</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-09-25T13:40:28.292950" elapsed="0.017557"/>
+</kw>
+<kw name="clickChoisirTaille" owner="list">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:28.313610" level="INFO">Clicking element 'css:[data-testid="wishlist-choose-size-sauce-bolt-shirt"]'.</msg>
+<arg>${choisirTailleBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:28.312967" elapsed="0.117375"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:28.312004" elapsed="0.118641"/>
+</kw>
+<kw name="clickSurM" owner="list">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:28.432852" level="INFO">Clicking element 'css:[data-testid="size-btn-M"]'.</msg>
+<arg>${chosirTailleM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:28.432067" elapsed="0.372850"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:28.431106" elapsed="0.374157"/>
+</kw>
+<kw name="clickAjoutPanier" owner="list">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:28.807887" level="INFO">Clicking element 'css:[data-testid="product-detail-add-to-cart"]'.</msg>
+<arg>${ajoutPanierBTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:28.806712" elapsed="0.177400"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:28.805716" elapsed="0.178806"/>
+</kw>
+<kw name="getTExtPanier" owner="list">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:29.022253" level="INFO">${msg} = 1</msg>
+<var>${msg}</var>
+<arg>${cartCount}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:28.985697" elapsed="0.036678"/>
+</kw>
+<return>
+<value>${msg}</value>
+<status status="PASS" start="2026-09-25T13:40:29.022606" elapsed="0.000115"/>
+</return>
+<msg time="2026-09-25T13:40:29.023212" level="INFO">${msg} = 1</msg>
+<var>${msg}</var>
+<status status="PASS" start="2026-09-25T13:40:28.985017" elapsed="0.038289"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${msg}</arg>
+<arg>1</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-09-25T13:40:29.023969" elapsed="0.002922"/>
+</kw>
+<kw name="ClickPanier" owner="list">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:29.029769" level="INFO">Clicking element 'css:[data-testid="cart-count"]'.</msg>
+<arg>${cartCount}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:29.028962" elapsed="0.110328"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:29.027425" elapsed="0.112130"/>
+</kw>
+<kw name="clickCOmmander" owner="cart">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:29.142345" level="INFO">Clicking button 'css:[data-testid="cart-checkout-button"]'.</msg>
+<arg>${commanderBTn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:29.141347" elapsed="0.275342"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:29.140000" elapsed="0.276929"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:29.429307" level="INFO">Current location contains 'checkout/info'.</msg>
+<arg>checkout/info</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-09-25T13:40:29.417214" elapsed="0.012274"/>
+</kw>
+<kw name="remplirForm" owner="information">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:29.432778" level="INFO">Typing text 'yedir' into text field 'id:first-name'.</msg>
+<arg>${prenom}</arg>
+<arg>yedir</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:29.431650" elapsed="0.171636"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:29.605031" level="INFO">Typing text 'benamar' into text field 'id:last-name'.</msg>
+<arg>${nom}</arg>
+<arg>benamar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:29.603936" elapsed="0.186752"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:29.793728" level="INFO">Typing text 'benamar@gmail.com' into text field 'id:email'.</msg>
+<arg>${email}</arg>
+<arg>benamar@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:29.791796" elapsed="0.271596"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:30.064678" level="INFO">Typing text '95870' into text field 'id:postal-code'.</msg>
+<arg>${postal-code}</arg>
+<arg>95870</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:30.063971" elapsed="0.170277"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:30.235654" level="INFO">Clicking button 'css:[data-testid="checkout-continue"]'.</msg>
+<arg>${btnContinue}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:30.234834" elapsed="0.215335"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:29.430466" elapsed="1.019963"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:30.465409" level="INFO">Current location contains 'checkout/review'.</msg>
+<arg>checkout/review</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-09-25T13:40:30.450840" elapsed="0.014813"/>
+</kw>
+<kw name="clickBtnCOnfirmer" owner="information">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:30.469901" level="INFO">Clicking button 'css:[data-testid="checkout-finish"]'.</msg>
+<arg>${btnCOnfirm}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:30.469294" elapsed="0.151298"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:30.466136" elapsed="0.154713"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:30.635185" level="INFO">Current location contains 'checkout/payment'.</msg>
+<arg>checkout/payment</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-09-25T13:40:30.621232" elapsed="0.014137"/>
+</kw>
+<kw name="remplirFormPaimenet" owner="paiement">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:30.637176" level="INFO">Typing text '4242 4242 4242 4242' into text field 'id:card-number'.</msg>
+<arg>${numcard}</arg>
+<arg>4242 4242 4242 4242</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:30.636562" elapsed="0.284255"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:30.921981" level="INFO">Typing text '12/29' into text field 'id:card-expiry'.</msg>
+<arg>${card-expiry}</arg>
+<arg>12/29</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:30.921315" elapsed="0.145203"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:31.067720" level="INFO">Typing text '134' into text field 'id:card-cvc'.</msg>
+<arg>${card-cvc}</arg>
+<arg>134</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:31.067052" elapsed="0.138649"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:31.207736" level="INFO">Typing text '77150' into text field 'id:card-name'.</msg>
+<arg>${card-name}</arg>
+<arg>77150</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:31.206224" elapsed="0.176821"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:31.384313" level="INFO">Clicking button 'css:[data-testid="payment-submit"]'.</msg>
+<arg>${payerBTN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:31.383643" elapsed="0.259915"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:30.635883" elapsed="1.008312"/>
+</kw>
+<kw name="getmsgCOnf" owner="paiement">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:33.152507" level="INFO">${msg} = Commande confirmée !</msg>
+<var>${msg}</var>
+<arg>${msgConf}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:31.647209" elapsed="1.505388"/>
+</kw>
+<return>
+<value>${msg}</value>
+<status status="PASS" start="2026-09-25T13:40:33.152728" elapsed="0.000069"/>
+</return>
+<msg time="2026-09-25T13:40:33.153023" level="INFO">${messageconf} = Commande confirmée !</msg>
+<var>${messageconf}</var>
+<status status="PASS" start="2026-09-25T13:40:31.644743" elapsed="1.508343"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${messageconf}</arg>
+<arg>Commande confirmée !</arg>
+<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
+<status status="PASS" start="2026-09-25T13:40:33.153356" elapsed="0.000971"/>
+</kw>
+<kw name="clickBTnRetour" owner="paiement">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${btnretour}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-09-25T13:40:33.155830" elapsed="0.024172"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:33.180788" level="INFO">Clicking element 'css:[data-testid="confirmation-home"]'.</msg>
+<arg>${btnretour}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:33.180387" elapsed="0.081076"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:33.155043" elapsed="0.106717"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:33.268796" level="INFO">Current location contains 'catalog'.</msg>
+<arg>catalog</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-09-25T13:40:33.262132" elapsed="0.006825"/>
+</kw>
+<kw name="clickLogOUt" owner="catalog">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:33.270224" level="INFO">Clicking element 'css:[data-testid="logout-button"]'.</msg>
+<arg>${btnLogout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-09-25T13:40:33.269812" elapsed="0.147071"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:33.269303" elapsed="0.147851"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2026-09-25T13:40:33.430735" level="INFO">Current location contains 'login'.</msg>
+<arg>login</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-09-25T13:40:33.417558" elapsed="0.013380"/>
+</kw>
+<status status="PASS" start="2026-09-25T13:40:24.992840" elapsed="8.438439"/>
+</test>
+<doc>test e2e</doc>
+<status status="PASS" start="2026-09-25T13:40:24.372524" elapsed="9.059794"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Parcours" id="s1" pass="1" fail="0" skip="0">Parcours</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
