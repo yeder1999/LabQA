@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    page de login
+Documentation    remplir les informations de la carte
 Library    SeleniumLibrary
 *** Variables ***
 ${commanderBTn}    css:[data-testid="cart-checkout-button"]

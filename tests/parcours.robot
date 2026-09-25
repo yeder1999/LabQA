@@ -9,10 +9,10 @@ Resource    ../pages/cart.resource
 Resource    ../pages/information.resource
 Resource    ../pages/catalog.resource
 Test Setup    init
-#Test Teardown    fermer
+Test Teardown    fermer
 *** Test Cases ***
-e2e
-    connexion
+parcourscomplet
+    Connect
     ${textHEader}=    getTextHeader
     Should Contain    ${textHEader}    Tous les produit
     clickSurVetement

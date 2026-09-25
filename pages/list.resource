@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    page de wishlist
+Documentation    page de wishlist favoris
 Library    SeleniumLibrary
 *** Variables ***
 ${choisirTailleBtn}    css:[data-testid="wishlist-choose-size-sauce-bolt-shirt"]

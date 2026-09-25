@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    page de login
+Documentation    remplir les informations de livraison
 Library    SeleniumLibrary
 *** Variables ***
 ${prenom}    id:first-name

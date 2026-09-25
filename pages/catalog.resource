@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    page de login
+Documentation    acceder au catalog
 Library    SeleniumLibrary
 *** Variables ***
 ${header}    css:.text-xl.font-medium.text-fg

@@ -1,0 +1,6 @@
+*** Test Cases ****,${userr},${pwdd},${result}
+Case1,jean_dupont,Baguette42!,success
+Case2,client_chaos,Baguette42!,success
+Case3,tortue_du_web,secret_saucee,failed
+Case4,client_chaos,secret_saucee,failed
+Case5,compte_banni,secret_saucee,failed

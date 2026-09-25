@@ -14,8 +14,8 @@ ${btnretour}    css:[data-testid="confirmation-home"]
 *** Keywords ***
 remplirFormPaimenet
     Input Text    ${numcard}    4242 4242 4242 4242
-    Input Text    ${card-expiry}    12/29
-    Input Text    ${card-cvc}    134
+    Input Text    ${card-expiry}    12/2207
+    Input Text    ${card-cvc}    163
     Input Text    ${card-name}    77150
     Click Button    ${payerBTN}
 getmsgCOnf

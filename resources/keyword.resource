@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    fichier keyword
+Documentation    fichier keyword pour les variables 
 Library    SeleniumLibrary
 *** Variables ***
 ${url}    https://ssid-testing-agency.github.io/Lab.qa/#/login
