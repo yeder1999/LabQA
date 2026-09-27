@@ -16,7 +16,7 @@ pipeline {
             agent {
     docker {
         image 'ppodgorsek/robot-framework:latest'
-        args "--entrypoint='' --shm-size=2g --network=pipeline_projet_robotframework_default"
+        args "--entrypoint='' --shm-size=2g --network=Catalog_default"
         reuseNode true
     }
 }
